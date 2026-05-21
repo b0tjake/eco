@@ -1,0 +1,34 @@
+@backend_HostAddress = http://localhost:5088
+
+
+//GET
+GET {{backend_HostAddress}}/products
+Accept: application/json
+
+###
+GET {{backend_HostAddress}}/products/2
+Accept: application/json
+
+//POST / PRODUCT
+###
+POST {{backend_HostAddress}}/products
+Content-Type: application/json
+
+{
+    "name": "headphones JBL",
+    "description": "Sponsored by lamine jamal these headphones are amazing product with high-quality sound and comfortable design.",
+    "price": 1.99,
+    "ReleaseDate": "2024-06-01"
+}
+
+//PUT / UPDATE PRODUCT
+###
+PUT {{backend_HostAddress}}/product/5
+Content-Type:application/json
+
+{
+    "Name" : "david martinez jacket",
+    "Description" : "This jacket is a must-have for any fashion-conscious individual. With its sleek design and high-quality materials, it offers both style and comfort. Whether you're heading out for a casual day or dressing up for a night out, this jacket will elevate your look and keep you warm.",
+    "Price" : 99.99,
+    "ReleaseDate" : "2024-06-01"
+}
